@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 body, html{
+    display: flex;
     height: 100%;
     margin: 0;
     font-family: 'Poppins', sans-serif;
     /* background: linear-gradient(#1c1917 50%, #ffb92a 50%); */
-    background-color: #440966;
+    background-color: #1e1e2e;
+    font-size: large;
     color: #333;
-    display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -48,11 +49,13 @@ body, html{
 #start-btn{
     padding: 12px 25px;
     background-color: #1c1917;
+    background-color: #6c5ce7;
+
     color: #fff;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 1em;
+    font-size: x-large;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     transition: background-color 0.3s ease, transform 0.1s ease;
     width: 100%;
@@ -60,8 +63,8 @@ body, html{
 }
 
 #start-btn:hover{
-    background-color: #15aabf;
-    transform: scale(1.05);
+
+    transform: scale(1.1);
 }
 
 #progress, #currentScore, #highScore{
@@ -82,6 +85,7 @@ body, html{
     padding: 10px 20px;
     margin-bottom: 12px;
     background-color: #1c1917;
+    
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -129,4 +133,10 @@ button{
 button:hover{
     background-color: #e64a19;
     transform: scale(1.05);
+}
+@media screen and (max-width: 768px) {
+    #quiz-container{
+        width: 100%;
+        margin: 2em;
+    }
 }
