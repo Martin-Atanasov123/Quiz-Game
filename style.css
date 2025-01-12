@@ -48,21 +48,20 @@ body, html{
 
 #start-btn{
     padding: 12px 25px;
-    background-color: #1c1917;
     background-color: #6c5ce7;
-
+    border: 2.5px solid #32244d;
     color: #fff;
-    border: none;
     border-radius: 8px;
     cursor: pointer;
     font-size: x-large;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-    transition: background-color 0.3s ease, transform 0.1s ease;
+    transition: background-color 0.1s ease, transform 0.1s ease;
     width: 100%;
     margin-top: 20px;
 }
 
 #start-btn:hover{
+    background-color: #6c5ce7d2;
 
     transform: scale(1.1);
 }
