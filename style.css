@@ -14,7 +14,7 @@ body, html{
 }
 
 #quiz-container{
-    width: 420px;
+    width: 460px;
     background-color: #ccc9c9f5;
     padding: 40px;
     border-radius: 20px;
@@ -68,12 +68,14 @@ body, html{
 #progress, #currentScore, #highScore{
     margin-bottom: 10px;
     font-size: 1em;
+    font-size: larger !important;
+
     font-weight: bold;
     color: #444;
 }
 
 #question{
-    font-size: 1em;
+    font-size: x-large !important;
     margin: 20px 0;
     color: #5a5a5a;
 }
@@ -87,6 +89,8 @@ body, html{
     border: none;
     border-radius: 8px;
     font-size: 0.9em;
+    font-size: larger !important;
+
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     transition: transform 0.1s ease;
