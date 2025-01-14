@@ -1,25 +1,25 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-    const questionContainer = document.getElementById('question'); // 📝
-    const answersContainer = document.getElementById('answers'); // 🅰️
-    const resultContainer = document.getElementById('result'); // 🎉
-    const progressContainer = document.getElementById('progress'); // 📊
-    const currentScoreDisplay = document.getElementById('currentScore'); // 🏆
-    const highScoreDisplay = document.getElementById('highScore'); // 🥇
-    const gameSetupDiv = document.getElementById('game-setup'); // ⚙️
-    const quizDiv = document.getElementById('quiz'); // 🎮
-    const categorySelect = document.getElementById('category'); // 📚
-    const amountInput = document.getElementById('amount'); // ❓
-    const difficultySelect = document.getElementById('difficulty'); // 🎯
-    const startButton = document.getElementById('start-btn'); // 🚀
+    const questionContainer = document.getElementById('question');
+    const answersContainer = document.getElementById('answers'); 
+    const resultContainer = document.getElementById('result'); 
+    const progressContainer = document.getElementById('progress'); 
+    const currentScoreDisplay = document.getElementById('currentScore'); 
+    const highScoreDisplay = document.getElementById('highScore'); 
+    const gameSetupDiv = document.getElementById('game-setup'); 
+    const quizDiv = document.getElementById('quiz'); 
+    const categorySelect = document.getElementById('category'); 
+    const amountInput = document.getElementById('amount'); 
+    const difficultySelect = document.getElementById('difficulty'); 
+    const startButton = document.getElementById('start-btn'); 
 
     let currentQuestions = [];
-    let score = 0; // 🏅
-    let questionIndex = 0; // 🔢
-    let highScore = parseInt(localStorage.getItem('HighScoreTrivia')) || 0; // 📈
+    let score = 0; 
+    let questionIndex = 0; 
+    let highScore = parseInt(localStorage.getItem('HighScoreTrivia')) || 0; 
     let questionStartTime;
-    const baseScorePerQuestion = 1000; // 💯
-    const penaltyPerSecond = 10; // ⏱️
+    const baseScorePerQuestion = 1000; 
+    const penaltyPerSecond = 10; 
 
     highScoreDisplay.innerText = `🥇 High Score: ${highScore}`;
 
@@ -35,12 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function startGame() {
-        const category = categorySelect.value; // 📚
-        const amount = amountInput.value; // 🔢
-        const difficulty = difficultySelect.value; // 🎯
-        fetchQuestions(amount, category, difficulty); // 🌐
-        gameSetupDiv.style.display = 'none'; // 🎛️ Hide setup
-        quizDiv.style.display = 'block'; // 🎮 Show quiz
+        const category = categorySelect.value; 
+        const amount = amountInput.value; 
+        const difficulty = difficultySelect.value; 
+        fetchQuestions(amount, category, difficulty); 
+        gameSetupDiv.style.display = 'none'; //  Hide setup
+        quizDiv.style.display = 'block'; //  Show quiz
     }
 
     function fetchQuestions(amount, category, difficulty) {
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         url += `&type=multiple`;
 
         fetch(url).then(response => response.json()).then(data => {
-            currentQuestions = data.results; // 🛠️
+            currentQuestions = data.results; 
             questionIndex = 0; // Reset question index
             score = 0; // Reset score
             displayQuestion();
